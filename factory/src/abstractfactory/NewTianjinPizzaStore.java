@@ -2,6 +2,7 @@ package abstractfactory;
 
 import abstractfactory.factory.TianjinIngredientFactory;
 import abstractfactory.pizza.CheesePizza;
+import abstractfactory.pizza.MilkPizza;
 import abstractfactory.pizza.Pizza;
 import abstractfactory.pizza.VeggiePizza;
 
@@ -16,9 +17,9 @@ public class NewTianjinPizzaStore extends PizzaStore {
         TianjinIngredientFactory factory = new TianjinIngredientFactory();
         if (type.equals("cheese")) {
             pizza = new CheesePizza(factory, "天津cheese pizza");
-        } else if (type.equals("veggie")) {
+        } else if (type.equals("mild")) {
 
-            pizza = new VeggiePizza(factory, "天津 veggie pizza");
+            pizza = new MilkPizza(factory, "天津 milk pizza");
         }
         return pizza;
     }

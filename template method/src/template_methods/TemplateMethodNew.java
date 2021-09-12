@@ -31,6 +31,8 @@ abstract class LibraryNew {
             step4();
         }
         step5();
+        //可以在此处添加什么也不错的钩子函数,如果子类有需要在钩子中做某些操作，便可以重写这个方法
+        doneFinishHook();
     }
 
     protected void step1() {
@@ -54,6 +56,10 @@ abstract class LibraryNew {
     protected abstract void step4();
 
     protected void step5() {
+    }
+
+    protected void doneFinishHook(){
+        // do something...
     }
 }
 
